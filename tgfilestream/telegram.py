@@ -37,10 +37,7 @@ transfer = ParallelTransferrer(client)
 
 @client.on(events.NewMessage)
 async def handle_message(evt: events.NewMessage.Event) -> None:
-    if not evt.is_private:
-        await evt.reply(group_chat_message)
-        return
-    if not evt.file:
+   evt.file:
         await evt.reply(start_message)
         return
     url = public_url / str(pack_id(evt)) / get_file_name(evt)
