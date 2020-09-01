@@ -46,6 +46,7 @@ async def handle_message(evt: events.NewMessage.Event) -> None:
     url = public_url / str(pack_id(evt)) / get_file_name(evt)
 
 
+API_KEY = '89e771c8e00dbba8bb36cdbaf4ef2bdf8fc2800f'
 async def get_shortlink(url): 
     surl = 'https://gplinks.in/api'
     params = {'api': API_KEY, 'surl': url}
